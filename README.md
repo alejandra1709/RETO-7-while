@@ -46,7 +46,7 @@ flowchart TD
     B["números impares"]-->C["i: entero"]-->D["i=1"]-->E
     E{"¿i<=999?"}-->|"si"|F["imprimir i"]-->G["i+=2"]-->E
     E-->|"no"|H["números pares"]-->I["j: entero"]-->J
-    J["j=2"]-->K{"j<=1000"}-->|"si"|L["imprimir j"]-->M
+    J["j=2"]-->K{"¿j<=1000?"}-->|"si"|L["imprimir j"]-->M
     M["j+=2"]-->K
     K-->|"no"|N("fin")
 ```
@@ -103,7 +103,7 @@ if __name__ == "__main__":
 ```python
 import random #Se importa random, para poder utilizar la función randint.
 if __name__ == "__main__":
-    numero:int=random.randint(1,100) #Con la función random se solicita un número aleatorio entre 1 y 100 y se guarda en 'numero'.
+    numero:int=random.randint(1,100) #Con la función randint de random se solicita un número aleatorio entre 1 y 100 y se guarda en 'numero'.
     intento_numero:int=int(input("Intente adivinar. Escriba un número entre 1 y 100: ")) #Se solicita un número y se convierte en entero.
     while intento_numero!=numero: #Mientras que el número que se ingresa sea diferente al número aleatorio seleccionado, se pregunta lo siguiente:
         if intento_numero<numero:
